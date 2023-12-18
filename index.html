@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal Webpage of Michael Ronan">
+    <title>Michael Ronan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-section">
+        <h1>Michael <mark id="meHead">Ronan</mark></h1>
+        <div id="aboutContainer">
+            <p id="About">
+                
+                    Hello, my name is Michael Ronan, I'm a junior <mark id="compsciText">Computer Science</mark> student at Indiana University Bloomington
+                    actively seeking internship opportunities. My coursework has equipped me with
+                    a strong technical foundation, and I'm passionate about applying my skills to
+                    real-world projects. I'm eager to learn, adapt, and collaborate with innovative
+                    organizations to further my career in computer science.
+                
+            </p>
+        </div>
+        <div id="portraitContainer">
+            <img id="Portrait" src="images/me.jpg">
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item" id="toggleAboutMe"> About me</div>
+        <a class="grid-item" id="toggleDocButton">
+            Resume
+        </a>
+        <div class="grid-item" id="toggleContact">Contact</div>
+        <div class="grid-item">Projects</div>
+    </div>
+
+    <div id="ContactContainer">
+        <p id="Contactinfo">
+            <b>
+                Contact Me
+            </b>
+        </p>
+        <p id="Email">
+            ronanmicheal0@gmail.com
+        </p>
+        <p id="phone">
+            773-441-8808
+        </p>
+        <a href="https://www.linkedin.com/in/micheal-ronan-aa1246235/" target="_blank">
+            <img id="LinkedinLogo" src="images/linkedin.jpg">
+        </a>
+        <a href="https://github.com/MichealRonan" target="_blank">
+            <img id="GitHubLogo" src="images/github.jpg">
+        </a>
+        <img id="GmailLogo" src="images/gmail.jpg">
+        <img id="PhoneLogo" src="images/phone.jpg">
+        <a href="https://www.instagram.com/michealronan/" target="_blank">
+            <img id="InstaLogo" src="images/insta.jpg">
+        </a>
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required="">
+            <input type="email" name="Email" placeholder="Your Email" required="">
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+        </form>
+    </div>
+    <iframe id="embeddedDoc" src="https://docs.google.com/document/d/e/2PACX-1vQO2G8jhmUKirBdCxA523475W0qfSRE05mDnPYmZ2eI-JAtX1njxrAodKX-MoW59e1KT8bRQMGMFD8p/pub?embedded=true" style="display: none; position: absolute; z-index: 1;"></iframe>
+
+    <script>
+
+        const toggleDocButton = document.getElementById("toggleDocButton");
+        const embeddedDoc = document.getElementById("embeddedDoc");
+        const toggleAboutMe = document.getElementById("toggleAboutMe");
+        const About = document.getElementById("About");
+        const toggleContact = document.getElementById("toggleContact");
+        const Contact = document.getElementById("ContactContainer"); 
+
+        toggleDocButton.addEventListener("click", function () {
+            if (About.style.display === "block") {
+                About.style.display = "none";
+            }
+            if (Contact.style.display === "block") {
+                Contact.style.display = "none";
+            }
+            if (embeddedDoc.style.display === "none" || embeddedDoc.style.display === "") {
+                embeddedDoc.style.display = "block";
+                embeddedDoc.style.outline = "none";
+                embeddedDoc.style.top = "200px";
+                embeddedDoc.style.left = "385px";
+                embeddedDoc.style.width = "800px";
+                embeddedDoc.style.height = "990px";
+            } else {
+                embeddedDoc.style.display = "none";
+            }
+        });
+
+        toggleAboutMe.addEventListener("click", function () {
+            if (embeddedDoc.style.display === "block") {
+                embeddedDoc.style.display = "none";
+            }
+            if (Contact.style.display === "block") {
+                Contact.style.display = "none";
+            }
+            if (About.style.display === "none" || About.style.display === "") {
+                About.style.display = "block";
+                About.style.top = "200px";
+                About.style.left = "25px";
+                About.style.width = "1000px";
+                About.style.height = "877px";
+            } else {
+                About.style.display = "none";
+            }
+        });
+
+        toggleContact.addEventListener("click", function () {
+            if (embeddedDoc.style.display === "block") {
+                embeddedDoc.style.display = "none";
+            }
+            if (About.style.display === "block") {
+                About.style.display = "none";
+            }
+            if (Contact.style.display === "none" || Contact.style.display === "") {
+                Contact.style.display = "block";
+            } else {
+                Contact.style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+body {
+    background-color: #fffaf0; /*877F7D*/
+    overflow-x: hidden;
+}
+#portraitContainer {
+    position: relative;
+    top: -600px; 
+    left: 1100px; 
+}
+#Portrait{
+    
+    border-radius: 20px;
+    width:400px;
+    top: -100px;
+    position: relative;
+    
+}
+h1 {
+    position: relative; 
+    top: 20px; 
+    left: 50px; 
+    font-size: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#meHead {
+    color: papayawhip;
+    background-color: #007aa5; /*#BEBDB8*/
+}
+#compsciText {
+    color: #007aa5;
+    background-color: #fffaf0;
+}
+#proInfo{
+    position:relative;
+    left: 300px;
+    top: 100px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 100px;
+    margin-left: 1000px;
+    width: 33%;
+    height: 65px;
+    z-index: 2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-item {
+    background-color: #007aa5;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+    .grid-item::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        width: 0px;
+        height: 10%;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 1.5));
+        transition: all 0.3s;
+    }
+
+    .grid-item:hover::before {
+        width: 62%;
+    }
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.top-section {
+    background-color: #007aa5;
+    width: 110%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+    width: 0;
+    height: 0;
+    transition: all 0.5s;
+}
+
+.expanded {
+    display: block;
+    width: 80%;
+    height: 80%;
+}
+#aboutContainer {
+    position: relative;
+    top: -150px;
+    left: 50px;
+    max-width: 1000px;
+}
+
+#About {
+    display:none;
+    position: relative;
+    top: -250px;
+    left: 50px;
+    max-width: 1000px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2;
+    font-weight: 400;
+}
+#ContactContainer {
+    display:none;
+    position:relative;
+
+}
+
+#Contactinfo {
+    position: relative;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    top: -30px;
+    left: 40px;
+}
+
+#Email {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    top: -50px;
+    left: 90px;
+}
+
+#phone {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    top: -12px;
+    left: 90px;
+}
+
+#LinkedinLogo {
+    position: relative;
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    top: 40px;
+    left: 25px;
+    transition: transform 0.2s ease;
+}
+    #LinkedinLogo:hover {
+        animation: bounce 0.5s ease;
+    }
+
+#GitHubLogo {
+    position: relative;
+    width: 80px;
+    height: auto;
+    border-radius: 40px;
+    top: 40px;
+    left: 70px;
+    transition: transform 0.2s ease;
+}
+
+#GitHubLogo:hover {
+    animation: bounce 0.5s ease;
+}
+
+#GmailLogo {
+    position: relative;
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    top: -190px;
+    left: -140px
+}
+
+#PhoneLogo {
+    position: relative;
+    width: 50px;
+    height: auto;
+    border-radius: 25px;
+    top: -100px;
+    left: -195px
+}
+
+#InstaLogo {
+    position: relative;
+    width: 80px;
+    height: auto;
+    border-radius: 25px;
+    top: 40px;
+    transition: transform 0.2s ease;
+}
+
+#InstaLogo:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+form[name="submit-to-google-sheet"] input[name="Name"] {
+    position: relative;
+    left: 923px;
+    top: -530px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fffaf0;
+}
+
+form[name="submit-to-google-sheet"] input[name="Email"] {
+    position: relative;
+    left: 610px;
+    top: -480px;
+    width: 302px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fffaf0;
+    outline: none;
+}
+
+form[name="submit-to-google-sheet"] textarea[name="Message"] {
+    position: relative;
+    left: 295px;
+    top: -200px;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: #fffaf0;
+    outline: none;
+}
+
+form[name="submit-to-google-sheet"] button[type="submit"] {
+    position: relative;
+    left: -215px;
+    top: -160px;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #fffaf0;
+    outline: none;
+}
+
+form[name="submit-to-google-sheet"] input[name="Name"]::placeholder {
+    color: dimgray;
+}
+
+form[name="submit-to-google-sheet"] input[name="Email"]::placeholder {
+    color: dimgray;
+}
+
+form[name="submit-to-google-sheet"] textarea[name="Message"]::placeholder {
+    color: dimgray;
+}
