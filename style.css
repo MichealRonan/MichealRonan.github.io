@@ -11,8 +11,8 @@ body {
     display:block;
     border-radius: 20px;
     width:400px;
-    top: 250px;
-    position: fixed;
+    top: -100px;
+    position: relative;
     
 }
 h1 {
