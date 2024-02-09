@@ -4,15 +4,15 @@ body {
 }
 #portraitContainer {
     position: relative;
-    top: -600px; 
+    top: -200px; 
     left: 1100px; 
 }
 #Portrait{
-    
+    display:block;
     border-radius: 20px;
     width:400px;
-    top: -100px;
-    position: relative;
+    top: 250px;
+    position: fixed;
     
 }
 h1 {
@@ -108,9 +108,10 @@ a:visited {
 }
 
 #About {
+    display:block;
     position: relative;
-    top: -250px;
-    left: 50px;
+    top: 200px;
+    left: 25px;
     max-width: 1000px;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
