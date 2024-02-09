@@ -89,11 +89,9 @@
         const About = document.getElementById("About");
         const toggleContact = document.getElementById("toggleContact");
         const Contact = document.getElementById("ContactContainer"); 
+        const Portrait = document.getElementById("Portrait");
 
         toggleDocButton.addEventListener("click", function () {
-            if (About.style.display === "block") {
-                About.style.display = "none";
-            }
             if (Contact.style.display === "block") {
                 Contact.style.display = "none";
             }
@@ -107,6 +105,8 @@
             } else {
                 embeddedDoc.style.display = "none";
             }
+            About.style.display = "none";
+            Portrait.style.display = "none";
         });
 
         toggleAboutMe.addEventListener("click", function () {
@@ -118,6 +118,7 @@
             }
             if (About.style.display === "none" || About.style.display === "") {
                 About.style.display = "block";
+                Portrait.style.display = "block";
                 About.style.top = "200px";
                 About.style.left = "25px";
                 About.style.width = "1000px";
@@ -126,19 +127,20 @@
                 About.style.display = "none";
             }
         });
-
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleAboutSection();
+        });
         toggleContact.addEventListener("click", function () {
             if (embeddedDoc.style.display === "block") {
                 embeddedDoc.style.display = "none";
-            }
-            if (About.style.display === "block") {
-                About.style.display = "none";
             }
             if (Contact.style.display === "none" || Contact.style.display === "") {
                 Contact.style.display = "block";
             } else {
                 Contact.style.display = "none";
             }
+            About.style.display = "none";
+            Portrait.style.display = "none";
         });
 
     </script>
