@@ -12,13 +12,7 @@
         <h1>Michael <mark id="meHead">Ronan</mark></h1>
         <div id="aboutContainer">
             <p id="About">
-                
-                    Hello, my name is Michael Ronan, I'm a junior <mark id="compsciText">Computer Science</mark> student at Indiana University Bloomington
-                    actively seeking internship opportunities. My coursework has equipped me with
-                    a strong technical foundation, and I'm passionate about applying my skills to
-                    real-world projects. I'm eager to learn, adapt, and collaborate with innovative
-                    organizations to further my career in computer science.
-                
+                Hello, my name is Michael Ronan. I recently graduated with a B.S. in <mark id="compsciText">Computer Science</mark> from Indiana University Bloomington with specializations in Data Science and Software Engineering. I’m passionate about applying my skills to real-world projects and eager to collaborate with innovative organizations to drive impactful solutions in tech.
             </p>
         </div>
         <div id="portraitContainer">
@@ -27,51 +21,21 @@
     </div>
 
     <div class="grid-container">
-        <div class="grid-item" id="toggleAboutMe"> 
-            <b>
-                About me
-            </b>
-            </div>
-        <a class="grid-item" id="toggleDocButton">
-            <b>
-            Resume
-            </b>
-        </a>
-        <div class="grid-item" id="toggleContact">
-            <b>
-            Contact
-            </b>
-        </div>
-        <div class="grid-item">
-            <b>
-                Projects
-            </b>
-            </div>
+        <div class="grid-item" id="toggleAboutMe"><b>About me</b></div>
+        <a class="grid-item" id="toggleDocButton"><b>Resume</b></a>
+        <div class="grid-item" id="toggleContact"><b>Contact</b></div>
+        <div class="grid-item"><b>Projects</b></div>
     </div>
 
     <div id="ContactContainer">
-        <p id="Contactinfo">
-            <b>
-                Contact Me
-            </b>
-        </p>
-        <p id="Email">
-            ronanmicheal0@gmail.com
-        </p>
-        <p id="phone">
-            773-441-8808
-        </p>
-        <a href="https://www.linkedin.com/in/micheal-ronan-aa1246235/" target="_blank">
-            <img id="LinkedinLogo" src="images/linkedin.jpg">
-        </a>
-        <a href="https://github.com/MichealRonan" target="_blank">
-            <img id="GitHubLogo" src="images/github.jpg">
-        </a>
+        <p id="Contactinfo"><b>Contact Me</b></p>
+        <p id="Email">ronanmicheal0@gmail.com</p>
+        <p id="phone">773-441-8808</p>
+        <a href="https://www.linkedin.com/in/micheal-ronan-aa1246235/" target="_blank"><img id="LinkedinLogo" src="images/linkedin.jpg"></a>
+        <a href="https://github.com/MichealRonan" target="_blank"><img id="GitHubLogo" src="images/github.jpg"></a>
         <img id="GmailLogo" src="images/gmail.jpg">
         <img id="PhoneLogo" src="images/phone.jpg">
-        <a href="https://www.instagram.com/michealronan/" target="_blank">
-            <img id="InstaLogo" src="images/insta.jpg">
-        </a>
+        <a href="https://www.instagram.com/michealronan/" target="_blank"><img id="InstaLogo" src="images/insta.jpg"></a>
         <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required="">
             <input type="email" name="Email" placeholder="Your Email" required="">
@@ -79,10 +43,10 @@
             <button type="submit" class="btn btn2">Submit</button>
         </form>
     </div>
-    <iframe id="embeddedDoc" src="https://docs.google.com/document/d/e/2PACX-1vQO2G8jhmUKirBdCxA523475W0qfSRE05mDnPYmZ2eI-JAtX1njxrAodKX-MoW59e1KT8bRQMGMFD8p/pub?embedded=true" style="display: none; position: absolute; z-index: 1;"></iframe>
+
+    <iframe id="embeddedDoc" src="MichaelRonan-Resume-Summer2025.pdf" style="display: none; position: absolute; z-index: 1;" frameborder="0"></iframe>
 
     <script>
-
         const toggleDocButton = document.getElementById("toggleDocButton");
         const embeddedDoc = document.getElementById("embeddedDoc");
         const toggleAboutMe = document.getElementById("toggleAboutMe");
@@ -91,59 +55,36 @@
         const Contact = document.getElementById("ContactContainer"); 
         const Portrait = document.getElementById("Portrait");
 
-        toggleDocButton.addEventListener("click", function () {
-            if (Contact.style.display === "block") {
-                Contact.style.display = "none";
-            }
-            if (embeddedDoc.style.display === "none" || embeddedDoc.style.display === "") {
-                embeddedDoc.style.display = "block";
-                embeddedDoc.style.outline = "none";
-                embeddedDoc.style.top = "200px";
-                embeddedDoc.style.left = "385px";
-                embeddedDoc.style.width = "800px";
-                embeddedDoc.style.height = "990px";
-            } else {
-                embeddedDoc.style.display = "none";
-            }
+        function hideAllSections() {
+            embeddedDoc.style.display = "none";
             About.style.display = "none";
             Portrait.style.display = "none";
+            Contact.style.display = "none";
+        }
+
+        toggleDocButton.addEventListener("click", function () {
+            hideAllSections();
+            embeddedDoc.style.display = "block";
+            embeddedDoc.style.top = "200px";
+            embeddedDoc.style.left = "385px";
+            embeddedDoc.style.width = "800px";
+            embeddedDoc.style.height = "990px";
         });
 
         toggleAboutMe.addEventListener("click", function () {
-            if (embeddedDoc.style.display === "block") {
-                embeddedDoc.style.display = "none";
-            }
-            if (Contact.style.display === "block") {
-                Contact.style.display = "none";
-            }
-            if (About.style.display === "none" || About.style.display === "") {
-                About.style.display = "block";
-                Portrait.style.display = "block";
-                About.style.top = "200px";
-                About.style.left = "25px";
-                About.style.width = "1000px";
-                About.style.height = "877px";
-                Portrait.style.top = "-617px";
-            } else {
-                About.style.display = "none";
-            }
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            toggleAboutSection();
-        });
-        toggleContact.addEventListener("click", function () {
-            if (embeddedDoc.style.display === "block") {
-                embeddedDoc.style.display = "none";
-            }
-            if (Contact.style.display === "none" || Contact.style.display === "") {
-                Contact.style.display = "block";
-            } else {
-                Contact.style.display = "none";
-            }
-            About.style.display = "none";
-            Portrait.style.display = "none";
+            hideAllSections();
+            About.style.display = "block";
+            Portrait.style.display = "block";
         });
 
+        toggleContact.addEventListener("click", function () {
+            hideAllSections();
+            Contact.style.display = "block";
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            hideAllSections(); // Hide all by default on load
+        });
     </script>
 </body>
 </html>
